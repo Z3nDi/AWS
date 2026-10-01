@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+/* 1. Кастомізація кольорів форми AWS Amplify */
+[data-amplify-authenticator] {
+    --amplify-colors-brand-primary-10: #e0f2fe;
+    --amplify-colors-brand-primary-80: #0284c7;
+    --amplify-colors-brand-primary-90: #0369a1;
+    --amplify-colors-brand-primary-100: #075985;
+    --amplify-components-button-primary-background-color: var(--amplify-colors-brand-primary-80);
+    --amplify-components-button-primary-hover-background-color: var(--amplify-colors-brand-primary-90);
+    --amplify-components-tabs-item-active-border-color: var(--amplify-colors-brand-primary-80);
+    --amplify-components-tabs-item-active-color: var(--amplify-colors-brand-primary-80);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 2. Стилі для нашого інтерфейсу завдань */
+.app-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    border-radius: 12px;
+    background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    background-color: #f0fdf4; /* Світло-зелений фон всієї сторінки */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f1f5f9;
 }
 
-.App-link {
-  color: #61dafb;
+    header h1 {
+        font-size: 1.5rem;
+        color: #1e293b;
+        margin: 0;
+    }
+
+.sign-out-btn, .add-btn {
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sign-out-btn {
+    background-color: #ef4444;
+}
+
+    .sign-out-btn:hover {
+        background-color: #dc2626;
+    }
+
+.add-btn {
+    background-color: #10b981;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+    .add-btn:hover {
+        background-color: #059669;
+    }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1.1rem;
+    color: #334155;
+}
+
+    li:hover {
+        background: #fee2e2;
+        border-color: #fca5a5;
+        transform: translateX(5px);
+    }
+
+.hint {
+    font-size: 0.85rem;
+    color: #64748b;
+    text-align: center;
+    margin-top: 20px;
 }
