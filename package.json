@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npx ampx generate outputs --out-dir src && react-scripts build",
+    "build": "npx ampx generate outputs --branch $AWS_BRANCH --app-id $AWS_APP_ID --out-dir src && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
